@@ -2,7 +2,7 @@
     /* margin: 0;
     padding: 0; */
     box-sizing: border-box;
-    /* border: solid 1px tomato; */
+    border: solid 1px tomato;
 }
 
 html,
@@ -50,13 +50,31 @@ body {
 .main {
     width: 100%;
     background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.main__header{
+.main__header {
     height: 56px;
 }
 
-.main__header-text{
+.main__header-text {
     font-size: 18px;
     padding: 14px 20px;
+}
+
+.chat-container {
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.messages-container {
+    height: 65%;
+}
+
+
+.input-container {
+    height: 35%;
 }
