@@ -74,6 +74,19 @@ body {
     height: 65%;
 }
 
+.messages__greeting-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messages__greeting-text {
+    font-size: 24px;
+    line-height: 32px;
+    width: 278px;
+    text-align: center;
+}
 
 .input-container {
     height: 35%;
