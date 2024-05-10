@@ -90,6 +90,7 @@ body {
 
 .input-container {
     height: 35%;
+    padding-bottom: min(3vh, 32px);
     display: flex;
     flex-direction: column;
 }
@@ -99,13 +100,25 @@ body {
 }
 
 .text-input-container {
+    padding: 11px 13px;
     display: flex;
+    border: 1px solid;
+    border-color: #00000025;
+    border-radius: 16px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.input__text-input {
+    outline: none;
+    border: none;
+    min-width: 5%;
+    padding-right: 10px;
+    flex-grow: 1;
 }
 
 .input__button {
     width: 30px;
     height: 30px;
-    padding: 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -114,7 +127,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .input__button:hover {
