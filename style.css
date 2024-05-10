@@ -2,7 +2,7 @@
     /* margin: 0;
     padding: 0; */
     box-sizing: border-box;
-    border: solid 1px tomato;
+    /* border: solid 1px tomato; */
 }
 
 html,
@@ -90,4 +90,37 @@ body {
 
 .input-container {
     height: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions-container {
+    height: 100%;
+}
+
+.text-input-container {
+    display: flex;
+}
+
+.input__button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.input__button:hover {
+    background-color: rgb(214, 213, 213);
+}
+
+.input__button:active {
+    background-color: rgb(180, 180, 180);
 }
