@@ -68,10 +68,14 @@ body {
     height: 100%;
     width: 60%;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .messages-container {
-    height: 65%;
+    height: 100%;
 }
 
 .messages__greeting-container {
@@ -89,21 +93,73 @@ body {
 }
 
 .input-container {
-    height: 35%;
     padding-bottom: min(3vh, 32px);
     display: flex;
     flex-direction: column;
 }
 
+/* Suggestions */
+
 .suggestions-container {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .875rem;
 }
+
+.suggestion-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.suggestion-button {
+    width: 49%;
+    flex-grow: 1;
+    background-color: #fff;
+    border: 1px solid #00000026;
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: left;
+    line-height: 20px;
+    cursor: pointer;
+
+}
+
+.suggestion-button:hover {
+    background-color: #f9f9f9;
+}
+
+.suggestion-button:active {
+    opacity: .8;
+}
+
+.suggestion__main-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+
+}
+
+.suggestion__sub-text {
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+/* Text-input */
 
 .text-input-container {
     padding: 11px 13px;
     display: flex;
-    border: 1px solid;
-    border-color: #00000025;
+    border: 1px solid #00000026;
     border-radius: 16px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
