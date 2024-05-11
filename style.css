@@ -14,8 +14,10 @@ body {
 }
 
 .container {
-    display: flex;
     height: 100%;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -25,6 +27,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    /* display: none; */
 }
 
 .sidebar__header-text {
@@ -49,10 +52,11 @@ body {
 
 .main {
     width: 100%;
-    background-color: #FFFFFF;
-
     display: flex;
     flex-direction: column;
+
+    background-color: #FFFFFF;
+
 }
 
 .main__header {
@@ -65,8 +69,8 @@ body {
 }
 
 .chat-container {
-    height: 100%;
-    width: 60%;
+    width: min(600px, 80%);
+    height: calc(100% - 56px);
     margin: 0 auto;
 
     display: flex;
@@ -74,15 +78,55 @@ body {
     justify-content: space-between;
 }
 
+
+
+/* messages */
+
 .messages-container {
     height: 100%;
+    overflow: scroll;
 }
+
+.message-container {
+    display: flex;
+    gap: .75rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.message__text-container {
+    width: 100%;
+}
+
+.message__text-name {
+    font-weight: 600;
+    user-select: none;
+}
+
+.message__text-body {
+    max-width: 90%;
+}
+
+.avatar-image {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #00000026;
+    border-radius: 9999px;
+    /* background-color: ; */
+}
+
+/* Greeting */
 
 .messages__greeting-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    display: none;
+
 }
 
 .messages__greeting-text {
@@ -91,6 +135,8 @@ body {
     width: 278px;
     text-align: center;
 }
+
+/* User input */
 
 .input-container {
     padding-bottom: min(3vh, 32px);
@@ -138,18 +184,18 @@ body {
 }
 
 .suggestion__main-text {
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap; */
     font-weight: 700;
 
 }
 
 .suggestion__sub-text {
-    white-space: nowrap;
-
+    /* white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+    overflow: hidden; */
+
     font-weight: 400;
     opacity: 0.5;
 }
@@ -165,9 +211,9 @@ body {
 }
 
 .input__text-input {
+    min-width: none;
     outline: none;
     border: none;
-    min-width: 5%;
     padding-right: 10px;
     flex-grow: 1;
 }
