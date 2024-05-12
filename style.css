@@ -2,7 +2,6 @@
     /* margin: 0;
     padding: 0; */
     box-sizing: border-box;
-    /* border: solid 1px tomato; */
 }
 
 /* Scrollbar */
@@ -75,17 +74,21 @@ body {
 
 }
 
+/* Heder */
+
 .main__header {
     height: 56px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 .main__header-text {
-    font-size: 18px;
-    padding: 14px 20px;
+    padding-left: 20px;
 }
 
 .chat-container {
-    width: min(768px, 80%);
+    width: min(768px, 94%);
     height: calc(100% - 56px);
     margin: 0 auto;
 
@@ -93,8 +96,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
-
 
 /* messages */
 
@@ -200,17 +201,17 @@ body {
 }
 
 .suggestion__main-text {
-    /* overflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; */
+    white-space: nowrap;
     font-weight: 700;
 
 }
 
 .suggestion__sub-text {
-    /* white-space: nowrap;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; */
+    overflow: hidden;
 
     font-weight: 400;
     opacity: 0.5;
@@ -254,4 +255,33 @@ body {
 
 .input__button:active {
     background-color: rgb(180, 180, 180);
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main__header {
+        height: 45px;
+        border-bottom: 1px solid rgba(0, 0, 0, .15);
+        font-size: 14px;
+    }
+
+    .messages__greeting-text {
+        font-size: 20px;
+    }
+
+    .suggestion-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suggestion-row:last-child {
+        display: none;
+    }
+
+    .suggestion-button{
+        width: 95%;
+    }
 }

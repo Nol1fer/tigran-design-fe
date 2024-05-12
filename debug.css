@@ -1,0 +1,11 @@
+* {
+    /* border: solid 1px tomato; */
+}
+
+.messages__greeting-container {
+    display: flex;
+}
+
+.message-container {
+    display: none;
+}
