@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -141,9 +143,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    display: none;
-
 }
 
 .messages__greeting-text {
@@ -282,4 +281,8 @@ body {
     .suggestion-button {
         width: 95%;
     }
+}
+
+.hide-element {
+    display: none;
 }

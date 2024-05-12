@@ -26,11 +26,11 @@
                 <div class="main__header-text">Мужики 6.3</div>
             </div>
             <div class="chat-container">
-                <div class="messages-container">
-                    <div class="messages__greeting-container">
+                <div class="messages-container" id="messages-container">
+                    <div class="messages__greeting-container" id="greeting-element">
                         <div class="messages__greeting-text">Как я могу помочь тебе сегодня?</div>
                     </div>
-                    <div class="message-container">
+                    <!-- <div class="message-container">
                         <div class="message__avatar-container">
                             <img class="avatar-image" src="./img/arrow.svg" alt="" srcset="">
                         </div>
@@ -149,10 +149,10 @@
                                 стирки!
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="input-container">
-                    <div class="suggestions-container">
+                    <div class="suggestions-container" id="suggestions-element">
                         <div class="suggestion-row">
                             <button class="suggestion-button">
                                 <div class="suggestion__main-text">Напиши текст 1</div>
@@ -175,8 +175,8 @@
                         </div>
                     </div>
                     <div class="text-input-container">
-                        <input class="input__text-input" size="1" type="text" required name="" id="">
-                        <button class="input__button">
+                        <input class="input__text-input" size="1" type="text" required name="" id="text-input">
+                        <button class="input__button" id="send-button">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 11L12 6L17 11M12 18V7" stroke="white" stroke-width="2"
@@ -188,6 +188,7 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
