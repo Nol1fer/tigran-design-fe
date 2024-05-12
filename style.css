@@ -238,23 +238,21 @@ body {
 .input__button {
     width: 30px;
     height: 30px;
+    padding: .125rem;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
-    background-color: rgb(240, 240, 240);
-
+    background-color: black;
+    opacity: 0.1;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.input__button:hover {
-    background-color: rgb(214, 213, 213);
-}
+.input__text-input:valid+.input__button {
+    opacity: 1;
+    cursor: pointer;
 
-.input__button:active {
-    background-color: rgb(180, 180, 180);
 }
 
 @media (max-width: 767px) {
@@ -281,7 +279,7 @@ body {
         display: none;
     }
 
-    .suggestion-button{
+    .suggestion-button {
         width: 95%;
     }
 }
