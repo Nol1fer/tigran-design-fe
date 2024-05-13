@@ -119,6 +119,7 @@ body {
 
 .message__text-container {
     max-width: calc(100% - 24px - 0.75rem);
+    flex-grow: 1;
 }
 
 .message__text-name {
