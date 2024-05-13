@@ -39,19 +39,35 @@ const createMessage = (who, text) => {
     messagesContainer.append(messageContainer);
 };
 
-const handleSend = () => {
-    let userText = textInput.value.trim();
-    if (!userText) return;
+const sendMessage = (text) => {
+    if (!text) return;
     if (!chatIsStarted) {
         chatIsStarted = true;
         greetingElement.classList.add('hide-element');
         suggestionsElement.classList.add('hide-element');
     }
-    console.log(userText);
-    textInput.value = '';
+    console.log(text);
 
-    createMessage('user', userText);
-    createMessage('chat-bot', userText + '\nэто написал бот');
+    createMessage('user', text);
+    createMessage('chat-bot', text + '\nэто написал бот');
 };
 
-sendButton.addEventListener('click', handleSend);
+const handleSendButton = () => {
+    let userText = textInput.value.trim();
+    if (!userText) return;
+    textInput.value = '';
+    sendMessage(userText);
+};
+
+const handleSuggestionButton = (event) => {
+    event.preventDefault();
+    const suggestionButton = event.target.closest('.suggestion-button');
+    if (!suggestionButton) return;
+    const mainText = suggestionButton.querySelector('.suggestion__main-text').textContent;
+    const subText = suggestionButton.querySelector('.suggestion__sub-text').textContent;
+    const wholeText = mainText + ' ' + subText;
+    sendMessage(wholeText);
+};
+
+sendButton.addEventListener('click', handleSendButton);
+suggestionsElement.addEventListener('click', handleSuggestionButton);
