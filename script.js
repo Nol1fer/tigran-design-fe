@@ -71,3 +71,9 @@ const handleSuggestionButton = (event) => {
 
 sendButton.addEventListener('click', handleSendButton);
 suggestionsElement.addEventListener('click', handleSuggestionButton);
+document.body.addEventListener('keydown', (e) => {
+    if (e.key === "Enter" && !e.shiftKey) { //  && window.innerWidth > 800
+        e.preventDefault();
+        handleSendButton();
+    }
+});
