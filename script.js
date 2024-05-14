@@ -16,7 +16,7 @@ const createMessage = (who, text) => {
     let imageSource = './img/girl.png';
     let name = 'Чат-бот';
     if (who === 'user') {
-        imageSource = './img/arrow.svg';
+        imageSource = './img/user.png';
         name = 'Вы';
     }
 
