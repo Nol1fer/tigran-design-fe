@@ -37,6 +37,7 @@ const createMessage = (who, text) => {
     messageContainer.append(messageAvatarContainer, messageTextContainer);
 
     messagesContainer.append(messageContainer);
+    messageContainer.scrollIntoView({ behavior: 'smooth' });
 };
 
 const sendMessage = (text) => {
