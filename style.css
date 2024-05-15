@@ -255,7 +255,11 @@ body {
 .input__text-input:valid+.input__button {
     opacity: 1;
     cursor: pointer;
+}
 
+.input__text-input:valid+.input__button:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
 }
 
 @media (max-width: 767px) {
