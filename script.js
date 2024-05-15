@@ -69,9 +69,9 @@ const sendMessage = async (text) => {
 
     createMessage('user', text);
     let botMessageTextElement = createMessage('chat-bot', 'Думаю...');
-    await delay(3000);
+    await delay(1000);
     botMessageTextElement.textContent = `Придумала! Вот ответ на вопрос "${text}"`;
-
+    botMessageTextElement.scrollIntoView({ behavior: 'smooth' });
     enableButton();
 
 };
