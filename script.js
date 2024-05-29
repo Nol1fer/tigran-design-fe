@@ -3,6 +3,22 @@ const textInput = document.getElementById('text-input');
 const greetingElement = document.getElementById('greeting-element');
 const suggestionsElement = document.getElementById('suggestions-element');
 const messagesContainer = document.getElementById('messages-container');
+const greetingTextElement = document.getElementById('greeting-text');
+
+const changeGreetingText = () => {
+    const greetings = [
+        'Как я могу помочь вам сегодня?',
+        'Приветствую! Как я могу оказать помощь?',
+        'Добрый день! Чем я могу помочь вам сегодня?',
+        'Добро пожаловать! На какой вопрос вы хотели бы узнать ответ?'
+    ];
+
+    const randomNumber = Math.floor(Math.random() * greetings.length);
+    const randomGreeting = greetings[randomNumber];
+    greetingTextElement.textContent = randomGreeting;
+    // console.log(randomGreeting);
+};
+changeGreetingText();
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
